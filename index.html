@@ -87,15 +87,14 @@
             display: block;
         }
 
-        /* Overlay Gelap di Atas Gambar */
+        /* Overlay Gelap di Atas Gambar (Dibuat sedikit gelap sejak awal agar ikon play kontras) */
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* Membuat gradasi gelap di bawah agar teks judul mudah dibaca */
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.85) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.85) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,23 +103,24 @@
 
         /* Efek Hover untuk Overlay */
         .video-card:hover .overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.9) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.9) 100%);
         }
 
-        /* Styling Ikon Play */
+        /* Styling Ikon Play - SEKARANG LANGSUNG MUNCUL */
         .play-icon {
             font-size: 2.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            opacity: 0; /* Sembunyi di awal, muncul saat hover */
-            transform: scale(0.8);
-            transition: all 0.3s ease;
-            margin-bottom: 30px; /* Sedikit naik ke atas agar tidak menabrak judul */
+            color: rgba(255, 255, 255, 0.85); /* Warna putih semi-transparan */
+            opacity: 1; /* DIUBAH: Langsung kelihatan 100% tanpa nunggu di-hover */
+            transform: scale(1); /* Ukuran normal sejak awal */
+            transition: all 0.2s ease;
+            margin-bottom: 30px; /* Jarak aman di atas judul */
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Efek shadow agar makin jelas */
         }
 
-        /* Munculkan Ikon Play saat di-hover */
+        /* Sedikit efek animasi membesar saat card di-hover agar interaktif */
         .video-card:hover .play-icon {
-            opacity: 1;
-            transform: scale(1);
+            color: #ffffff;
+            transform: scale(1.1);
         }
 
         /* Info Judul Video */
@@ -133,7 +133,6 @@
             font-weight: 500;
             color: #ffffff;
             line-height: 1.2;
-            /* Membatasi teks maksimal 2 baris, sisanya jadi titik-titik (...) */
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -159,13 +158,13 @@
 <body>
 
     <header class="main-header">
-        <h1>KOLEKSI VIDEO B0K3P VIRAL</h1>
-        <p>Kumpulan Video Viral b0k3p Terbaru 2026</p>
+        <h1>Koleksi Video Galeri</h1>
+        <p>Jelajahi berbagai macam konten video menarik dan estetik terpopuler</p>
     </header>
 
     <div class="gallery-container">
 
-        <a href="https://cerita-kompas.com/game/51" target="_blank" class="video-card-link">
+        <a href="https://link-video-tujuan-1.com" target="_blank" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/7M79Z8z/download-33.jpg" alt="Thumbnail 1" class="thumbnail">
                 <div class="overlay">
@@ -176,18 +175,18 @@
             </div>
         </a>
 
-        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+        <a href="#" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/C5WxqSRK/Gemini-Generated-Image-aunfliaunfliaunf.png" alt="Thumbnail 2" class="thumbnail">
                 <div class="overlay">
                     <i class="fa-solid fa-circle-play play-icon"></i>
                 </div>
-                <div class="video-title">di ajakin check-in sama ayang </div>
+                <div class="video-title">di ajakin check-in sama ayang</div>
                 <div class="duration-badge">01:45</div>
             </div>
         </a>
 
-        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+        <a href="#" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/6RcpQ9GF/download-24.jpg" alt="Thumbnail 3" class="thumbnail">
                 <div class="overlay">
@@ -198,7 +197,7 @@
             </div>
         </a>
 
-        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+        <a href="#" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/ds76zD52/download-23.jpg" alt="Thumbnail 4" class="thumbnail">
                 <div class="overlay">
@@ -209,7 +208,7 @@
             </div>
         </a>
 
-        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+        <a href="#" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/zWsqWyQ2/download-14.jpg" alt="Thumbnail 5" class="thumbnail">
                 <div class="overlay">
@@ -220,13 +219,13 @@
             </div>
         </a>
 
-        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+        <a href="#" class="video-card-link">
             <div class="video-card">
                 <img src="https://i.ibb.co/jPn01XDP/Gemini-Generated-Image-fx1sihfx1sihfx1s.png" alt="Thumbnail 6" class="thumbnail">
                 <div class="overlay">
                     <i class="fa-solid fa-circle-play play-icon"></i>
                 </div>
-                <div class="video-title">Gadis Tocil first time ngent0t bareng pacar </div>
+                <div class="video-title">Gadis Tocil first time ngent0t bareng pacar</div>
                 <div class="duration-badge">01:20</div>
             </div>
         </a>
