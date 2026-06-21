@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Grid Gallery dengan Judul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f; /* Warna latar belakang gelap */
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Mengatur susunan konten dari atas ke bawah */
+            align-items: center;    /* Memastikan semua kontainer berada di tengah */
+        }
+
+        /* Container Header untuk Judul Besar */
+        .main-header {
+            width: 100%;
+            max-width: 1400px;
+            text-align: center;
+            padding: 20px 10px 30px 10px;
+        }
+
+        .main-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .main-header p {
+            font-size: 1rem;
+            color: #aaaaaa;
+            margin-top: 8px;
+        }
+
+        /* Container Utama Grid */
+        .gallery-container {
+            width: 100%;
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        /* Link Wrapper untuk Card */
+        .video-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Styling Card Video */
+        .video-card {
+            position: relative;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 3 / 4; /* Rasio vertikal */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Efek saat Card di-hover */
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gambar Thumbnail */
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Overlay Gelap di Atas Gambar */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Membuat gradasi gelap di bawah agar teks judul mudah dibaca */
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.85) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        /* Efek Hover untuk Overlay */
+        .video-card:hover .overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.9) 100%);
+        }
+
+        /* Styling Ikon Play */
+        .play-icon {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            opacity: 0; /* Sembunyi di awal, muncul saat hover */
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+            margin-bottom: 30px; /* Sedikit naik ke atas agar tidak menabrak judul */
+        }
+
+        /* Munculkan Ikon Play saat di-hover */
+        .video-card:hover .play-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Info Judul Video */
+        .video-title {
+            position: absolute;
+            bottom: 35px; /* Memberi ruang untuk badge durasi di bawahnya */
+            left: 12px;
+            right: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            line-height: 1.2;
+            /* Membatasi teks maksimal 2 baris, sisanya jadi titik-titik (...) */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Badge Durasi Video */
+        .duration-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            background-color: rgba(225, 25, 25, 0.85); /* Warna merah ala penanda video/live */
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>KOLEKSI VIDEO B0K3P VIRAL</h1>
+        <p>Kumpulan Video Viral b0k3p Terbaru 2026</p>
+    </header>
+
+    <div class="gallery-container">
+
+        <a href="https://cerita-kompas.com/game/51" target="_blank" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/7M79Z8z/download-33.jpg" alt="Thumbnail 1" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">Di Paksa puasin nafsu kaka yang lagi s@nge</div>
+                <div class="duration-badge">02:15</div>
+            </div>
+        </a>
+
+        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/C5WxqSRK/Gemini-Generated-Image-aunfliaunfliaunf.png" alt="Thumbnail 2" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">di ajakin check-in sama ayang </div>
+                <div class="duration-badge">01:45</div>
+            </div>
+        </a>
+
+        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/6RcpQ9GF/download-24.jpg" alt="Thumbnail 3" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">nikmatin tubuh yang sangat sempurna milik istri sahabat</div>
+                <div class="duration-badge">03:02</div>
+            </div>
+        </a>
+
+        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/ds76zD52/download-23.jpg" alt="Thumbnail 4" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">cewe sexy doyan spong</div>
+                <div class="duration-badge">00:59</div>
+            </div>
+        </a>
+
+        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/zWsqWyQ2/download-14.jpg" alt="Thumbnail 5" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">godain pacar di rumah saat tidak ada orang</div>
+                <div class="duration-badge">04:12</div>
+            </div>
+        </a>
+
+        <a href="https://cerita-kompas.com/game/51" class="video-card-link">
+            <div class="video-card">
+                <img src="https://i.ibb.co/jPn01XDP/Gemini-Generated-Image-fx1sihfx1sihfx1s.png" alt="Thumbnail 6" class="thumbnail">
+                <div class="overlay">
+                    <i class="fa-solid fa-circle-play play-icon"></i>
+                </div>
+                <div class="video-title">Gadis Tocil first time ngent0t bareng pacar </div>
+                <div class="duration-badge">01:20</div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
